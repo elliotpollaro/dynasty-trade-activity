@@ -1,4 +1,5 @@
-# A GitHub release on the 1st of each month, when new weeks have landed since the last one.
+# A GitHub release on the 1st of each month, when a newer data week has landed since the last
+# release (README or other edits alone don't make a new version).
 # Zenodo archives every release and gives it a DOI (the concept DOI always points at the newest).
 # The weekly data commits come from Dynasty Dealer's own job; this only snapshots them.
 name: Monthly release (Zenodo snapshot)
@@ -22,12 +23,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          last=$(git describe --tags --abbrev=0 2>/dev/null || true)
-          if [ -n "$last" ] && [ "$(git rev-list "$last"..HEAD --count)" = "0" ]; then
-            echo "Nothing new since $last"
-            exit 0
-          fi
           newest=$(tail -n 1 data/market_weekly.csv | cut -d, -f1)
+          last=$(git describe --tags --abbrev=0 2>/dev/null || true)
+          if [ -n "$last" ]; then
+            released=$(git show "$last:data/market_weekly.csv" | tail -n 1 | cut -d, -f1)
+            if [ "$newest" = "$released" ]; then
+              echo "No new weeks since $last (newest is still $newest)"
+              exit 0
+            fi
+          fi
           tag="v$(date -u +%Y.%m.%d)"
           gh release create "$tag" --target "$GITHUB_SHA" \
             --title "Weekly trade activity through the week of $newest" \

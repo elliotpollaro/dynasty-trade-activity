@@ -1,5 +1,7 @@
 # Dynasty Trade Activity
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23822003.svg)](https://doi.org/10.5281/zenodo.23822003)
+
 Weekly counts of how often each player and draft pick was traded in real dynasty fantasy football
 leagues, published by [Dynasty Dealer](https://www.dynastydealer.com).
 
@@ -103,7 +105,9 @@ For commercial use, open an issue on this repository.
 
 ## Cite
 
-Use GitHub's "Cite this repository" button (from [`CITATION.cff`](CITATION.cff)).
+Archived on Zenodo: DOI [10.5281/zenodo.23822003](https://doi.org/10.5281/zenodo.23822003). That DOI always points to
+the newest version. A new version is archived on the 1st of each month, and each one has its own DOI. GitHub's
+"Cite this repository" button (from [`CITATION.cff`](CITATION.cff)) gives the same citation.
 
 Also from Dynasty Dealer: the code, league samples and results behind eight pre-registered fantasy
 football case studies, DOI [10.5281/zenodo.23813186](https://doi.org/10.5281/zenodo.23813186).

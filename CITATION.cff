@@ -9,6 +9,7 @@ authors:
 repository-code: "https://github.com/elliotpollaro/dynasty-trade-activity"
 url: "https://www.dynastydealer.com"
 license: CC-BY-NC-4.0
+doi: 10.5281/zenodo.23822003
 keywords:
   - fantasy football
   - dynasty fantasy football
