@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it and credit Dynasty Dealer (https://www.dynastydealer.com)."
+type: dataset
+title: "Dynasty Trade Activity: weekly player and draft-pick trade counts from real dynasty fantasy football leagues"
+authors:
+  - family-names: Pollaro
+    given-names: Elliot
+    affiliation: Dynasty Dealer
+repository-code: "https://github.com/elliotpollaro/dynasty-trade-activity"
+url: "https://www.dynastydealer.com"
+license: CC-BY-NC-4.0
+keywords:
+  - fantasy football
+  - dynasty fantasy football
+  - trades
+  - sports analytics
+  - open data
+  - NFL
+date-released: "2026-10-30"
